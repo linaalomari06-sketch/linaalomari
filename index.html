@@ -677,7 +677,7 @@ var ICONS={
 function icon(name,cls){return sv("svg",{class:"i"+(cls?" "+cls:""),viewBox:"0 0 24 24","aria-hidden":"true"},[sv("path",{d:ICONS[name]})]);}
 function fmtDate(s){if(!s)return "";var m=/^(\d{4})(?:-(\d{1,2}))?/.exec(s);if(!m)return s;return m[2]?MONTHS[+m[2]-1]+" "+m[1]:m[1];}
 function range(it){var a=fmtDate(it.date),b=it.end==="present"?"Present":fmtDate(it.end);return a&&b?a+" – "+b:(a||b||"");}
-var VIDS=["38f3f8eb9bd8011f145b3ef279671bed", "8f8410d2c0e6c54ae5152ceffed39d66"];function blob(id){return "assets/"+id+(VIDS.indexOf(id)>=0?".mp4":".jpg");}
+var VIDS=["38f3f8eb9bd8011f145b3ef279671bed", "8f8410d2c0e6c54ae5152ceffed39d66"];function blob(id){return id+(VIDS.indexOf(id)>=0?".mp4":".jpg");}
 function typeOf(k){return TYPES.filter(function(t){return t.key===k;})[0];}
 function byType(t){
   return state.items.filter(function(i){return i.type===t;}).sort(function(a,b){
